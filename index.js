@@ -16,6 +16,19 @@ function writeToFile (FileName, answers) {
     }
     else {
         shapeChoice = new circle ();
-        svg += `<circle cx="150" cy="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`
+        svg += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`
     }
+    svg += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
+    svg += "<g>";
+    svg += "</svg>";
+    
+    fs.writeFile(FileName, svg, (err) => {
+        err ? console.log(err) : console.log("generated logo.svg");
+    });
+}
+function promptUser() {
+    inquirer
+    .prompt([
+        
+    ])
 }
