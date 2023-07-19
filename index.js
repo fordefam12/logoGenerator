@@ -52,7 +52,7 @@ function promptUser() {
     ])
     .then((answers) => {
         if (answers.text.length > 3) {
-            console.log("must enter a value of no more than 3 characters");\
+            console.log("must enter a value of no more than 3 characters");
             promptUser();
         }
         else {
