@@ -31,7 +31,7 @@ function promptUser() {
     .prompt([
         {
             type: "Input",
-            message: "what tet would you like your logo to display ?",
+            message: "what text would you like your logo to display ?",
             name: "text",
         },
         {
@@ -41,13 +41,23 @@ function promptUser() {
         },
         {
             type: "list",
-            message: "what shape?",
-            name: "text",
+            message: "what shape would you like the logo to be?",
+            name: "shape",
         },
         {
             type: "Input",
-            message: "what tet would you like your logo to display ?",
-            name: "text",
+            message: "choose shape color",
+            name: "shapeBackgroundColor",
         },
     ])
+    .then((answers) => {
+        if (answers.text.length > 3) {
+            console.log("must enter a value of no more than 3 characters");\
+            promptUser();
+        }
+        else {
+            writeToFile("logo.svg", answers)
+        }
+    })
 }
+promptUser();
