@@ -29,6 +29,25 @@ function writeToFile (FileName, answers) {
 function promptUser() {
     inquirer
     .prompt([
-        
+        {
+            type: "Input",
+            message: "what tet would you like your logo to display ?",
+            name: "text",
+        },
+        {
+            type: "Input",
+            message: "choose Text color",
+            name: "textColor",
+        },
+        {
+            type: "list",
+            message: "what shape?",
+            name: "text",
+        },
+        {
+            type: "Input",
+            message: "what tet would you like your logo to display ?",
+            name: "text",
+        },
     ])
 }
