@@ -41,9 +41,10 @@ N/A
 
 
 ## Logos
-![triangle](examples/Triangle.svg)
-![square](examples/Square.svg)
-![circle](examples/Circle.svg)
+
+![triangle](./png/triangle.png)
+![square](./png/square.png)
+![circle](./png/circle.png)
 
 ## Tests
 yes a video of the test included below
