@@ -1,23 +1,22 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const { triangle, square, circle } = require("./lib/classes");
+const { Triangle, Square, Circle } = require("./lib/classes");
 
 function writeToFile(FileName, answers) {
-  const svg = "";
-  svg =
-    '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
-  svg = "<g>";
-  svg += `${snaswers.shape}`;
+  let svg = "";
+  svg ='<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
+  svg += "<g>";
+  svg += `${answers.Shape}`;
 
   let shapeChoice;
-  if (answers.shape === "triangle") {
-    shapeChoice = new triangle();
-    svg += `<polygon points="150",18 244, 182 56,182" fill="${answers.shapeBackgroundColor}"/>`;
-  } else if (answers.shape === "square") {
-    shapeChoice = new square();
+  if (answers.shape === "Triangle") {
+    shapeChoice = new Triangle();
+    svg += `<polygon points="150,18 244, 182 56,182" fill="${answers.shapeBackgroundColor}"/>`;
+  } else if (answers.shape === "Square") {
+    shapeChoice = new Square();
     svg += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
   } else {
-    shapeChoice = new circle();
+    shapeChoice = new Circle();
     svg += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
   }
   svg += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
@@ -31,6 +30,11 @@ function writeToFile(FileName, answers) {
 function promptUser() {
   inquirer
     .prompt([
+        {
+            type: "Input",
+            message: "choose shape color...",
+            name: "shapeBackgroundColor",
+          },
       {
         type: "Input",
         message: "what text would you like your logo to display ?",
@@ -38,26 +42,24 @@ function promptUser() {
       },
       {
         type: "Input",
-        message: "choose Text color",
+        message: "choose Text color...",
         name: "textColor",
       },
       {
-        type: "list",
+        type: "input",
         message: "what shape would you like the logo to be?",
         name: "shape",
+        choices:["Triangle","Square","Circle"],
       },
-      {
-        type: "Input",
-        message: "choose shape color",
-        name: "shapeBackgroundColor",
-      },
+      
+     
     ])
     .then((answers) => {
       if (answers.text.length > 3) {
         console.log("must enter a value of no more than 3 characters");
         promptUser();
       } else {
-        writeToFile("logo.svg", answers);
+        writeToFile("./examples/logo.svg", answers);
       }
     });
 }
