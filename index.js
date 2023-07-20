@@ -24,7 +24,7 @@ function writeToFile(FileName, answers) {
   svg += "</svg>";
 
   fs.writeFile(FileName,svg, (err) => {
-    err ? console.log(err) : console.log("generated shape");
+    err ? console.log(err) : console.log("generated logo.svg");
     
    
    
@@ -53,7 +53,7 @@ function writeToFile(FileName, answers) {
       
       {
         type: "Input",
-        message: "what text would you like your logo to display ?",
+        message: "what text would you like your logo to display (must be 3 characters of less) ?",
         name: "text",
       },
       
@@ -65,9 +65,9 @@ function writeToFile(FileName, answers) {
         console.log("must enter a value of no more than 3 characters");
         promptUser();
       } else {
-        // fs.createWriteStream(`./examples/${answers.Shape}.svg`, answers),
         writeToFile(`./examples/${answers.Shape}.svg`, answers);
-        // fs.createWriteStream(`./examples/${answers.Shape}.svg`);
+        writeToFile(`./examples/logo.svg`, answers);
+    
       }
     
     });
