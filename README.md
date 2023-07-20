@@ -52,5 +52,9 @@ Any questions about this project please send me a message on *https://github.com
  ![QR code](<frame (1).png>)
 
  https://github.com/fordefam12/logoGenerator
+ 
+ ## Video link
 
  https://www.awesomescreenshot.com/video/19297487?key=a157892e48c821d77fc44f6afd9e181d
+
+ <video src="Google%20(1).mp4" controls title="walkthrough"></video>
