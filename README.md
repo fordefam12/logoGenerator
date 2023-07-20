@@ -51,4 +51,6 @@ Any questions about this project please send me a message on *https://github.com
 ## URL
  ![QR code](<frame (1).png>)
 
- ![video]https://www.awesomescreenshot.com/video/19297487?key=a157892e48c821d77fc44f6afd9e181d
+ https://github.com/fordefam12/logoGenerator
+
+ https://www.awesomescreenshot.com/video/19297487?key=a157892e48c821d77fc44f6afd9e181d
