@@ -39,8 +39,8 @@ N/A
 ## License
 [![License: undefined](https://img.shields.io/badge/License-Open_Software_License_3.0-brightgreen.svg)](https://opensource.org/licenses/Open_Software_License_3.0)
 
+https://img.shields.io/badge/javascript-blue
 
-Open_Software_License_3.0
 
 ## badges
 
@@ -51,4 +51,6 @@ yes a video of the test included below
 Any questions about this project please send me a message on *https://github.com/fordefam12 or email me at [fordefam12@gmail.com]
   
 ## URL
- 
+ ![QR code](<frame (1).png>)
+
+ ![video]https://github.com/fordefam12/logoGenerator
