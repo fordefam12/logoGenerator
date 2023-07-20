@@ -40,7 +40,10 @@ N/A
 ![JavaScript](https://img.shields.io/badge/JavaScript-100%25-blue)
 
 
-## badges
+## Logos
+![triangle](examples/Triangle.svg)
+![square](examples/Square.svg)
+![circle](examples/Circle.svg)
 
 ## Tests
 yes a video of the test included below
